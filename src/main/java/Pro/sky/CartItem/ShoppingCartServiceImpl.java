@@ -1,6 +1,6 @@
 package Pro.sky.CartItem;
 
-import jakarta.servlet.http.HttpServletRequest;
+import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
@@ -9,6 +9,7 @@ import java.util.List;
 import java.util.Map;
 
 @Service
+@Scope("session")
 public class ShoppingCartServiceImpl implements ShoppingCartService {
     private final Map<Long, List<Long>> shoppingCarts = new HashMap<>();
 
